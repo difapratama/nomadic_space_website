@@ -11,7 +11,7 @@ const navLinks = [
     { label: 'CONTACT', href: '/contact' },
 ];
 
-const WHATSAPP_NUMBER = '6281234567890';
+const WHATSAPP_NUMBER = '6281992729298';
 const WHATSAPP_MESSAGE = 'Halo Nomadic Space, saya ingin konsultasi gratis mengenai desain interior.';
 
 const WhatsAppIcon = () => (
@@ -26,7 +26,11 @@ export default function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        const checkMobile = () => {
+            const mobile = window.innerWidth <= 768;
+            setIsMobile(mobile);
+            if (!mobile) setMenuOpen(false);  // ← pindah ke sini, bukan effect terpisah
+        };
         checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
@@ -37,11 +41,6 @@ export default function Navbar() {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-
-    // tutup menu kalau resize ke desktop
-    useEffect(() => {
-        if (!isMobile) setMenuOpen(false);
-    }, [isMobile]);
 
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 

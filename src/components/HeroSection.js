@@ -52,6 +52,7 @@ export default function HeroSection() {
         };
         window.addEventListener('wheel', handleWheel, { passive: false });
         return () => window.removeEventListener('wheel', handleWheel);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // Touch
@@ -70,6 +71,7 @@ export default function HeroSection() {
             window.removeEventListener('touchstart', onStart);
             window.removeEventListener('touchend', onEnd);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // Keyboard
@@ -80,6 +82,7 @@ export default function HeroSection() {
         };
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
