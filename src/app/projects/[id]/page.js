@@ -35,12 +35,9 @@ export default function ProjectDetail({ params }) {
             <Navbar />
 
             <main style={{ paddingTop: 80, minHeight: '100vh', backgroundColor: '#FDFCF8' }}>
-                <div style={{ display: 'flex', minHeight: '100vh' }}>
-                    <div style={{
-                        flex: 1,
-                        padding: '128px 48px 48px 48px',   // ← padding top 128 = navbar + space
-                        maxWidth: '62%'
-                    }}>
+                <div style={{ display: 'flex', minHeight: 'calc(100vh - 80px)' }} className="detail-layout">
+                    {/* LEFT — scrollable content */}
+                    <div style={{ flex: 1, padding: '48px 48px', overflowY: 'auto', maxWidth: '62%' }} className="detail-left">
 
                         <h1 style={{
                             fontFamily: 'Cormorant Garamond, Georgia, serif',
@@ -52,7 +49,7 @@ export default function ProjectDetail({ params }) {
                         </h1>
 
                         {/* Grid 3 kolom */}
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 40 }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 40 }} className="photo-grid">
                             {gridImages.map((img, i) => (
                                 <div
                                     key={i}
@@ -132,12 +129,11 @@ export default function ProjectDetail({ params }) {
                     <div style={{
                         width: '38%',
                         position: 'fixed',
-                        top: 0,                        // ← ubah dari 80 ke 0
-                        right: 0,
-                        height: '100vh',               // ← ubah dari calc(100vh - 80px) ke 100vh
+                        top: 0, right: 0,
+                        height: '100vh',
                         overflow: 'hidden',
-                        zIndex: 1,                     // ← tambah ini
-                    }}>
+                        zIndex: 1,
+                    }} className="detail-right">
                         <img
                             src={project.thumbnail}
                             alt={project.name}
@@ -214,6 +210,28 @@ export default function ProjectDetail({ params }) {
                     </button>
                 </div>
             )}
+
+            <style>{`
+  @media (max-width: 768px) {
+    .detail-layout {
+      flex-direction: column !important;
+    }
+    .detail-right {
+      display: none !important;
+    }
+    .detail-left {
+      max-width: 100% !important;
+      padding: 24px 20px !important;
+    }
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .info-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+  }
+`}</style>
         </>
     );
 }

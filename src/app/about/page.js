@@ -67,15 +67,10 @@ export default function AboutPage() {
             <main style={{ paddingTop: 80, backgroundColor: '#FDFCF8', minHeight: '100vh' }}>
 
                 {/* SECTION 1 — Hero split */}
-                <section style={{ display: 'flex', minHeight: '90vh' }}>
+                <section style={{ display: 'flex', minHeight: '90vh' }} className="about-hero">
 
                     {/* Left — image */}
-                    <div style={{
-                        width: '45%',
-                        position: 'relative',
-                        overflow: 'hidden',
-                        flexShrink: 0,
-                    }}>
+                    <div style={{ width: '45%', position: 'relative', overflow: 'hidden', flexShrink: 0 }} className="about-hero-image">
                         <img
                             src="https://www.arkadiaworks.com/wp-content/themes/domik-new/images/bg/slide1.jpg"
                             alt="Nomadic Space"
@@ -206,7 +201,7 @@ export default function AboutPage() {
                     backgroundColor: '#1c1917',
                     padding: 'clamp(64px, 8vw, 120px) clamp(40px, 8vw, 120px)',
                 }}>
-                    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 48 }} className="about-approach-grid">
                         <p style={{
                             fontFamily: 'Inter, sans-serif', fontSize: 11,
                             letterSpacing: '0.25em', color: '#b45309', marginBottom: 24,
@@ -275,10 +270,7 @@ export default function AboutPage() {
                         backgroundColor: '#F5F0E8',
                     }}
                 >
-                    <div style={{
-                        maxWidth: 900, margin: '0 auto',
-                        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 48,
-                    }}>
+                    <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 48 }} className="about-stats-grid">
                         <StatItem value={15} suffix="+" label="Projects Completed" start={statsVisible} />
                         <StatItem value={10} suffix="+" label="Happy Clients" start={statsVisible} />
                         <StatItem value={100} suffix="%" label="Personal Attention" start={statsVisible} />
@@ -291,7 +283,7 @@ export default function AboutPage() {
                     backgroundColor: '#FDFCF8',
                     textAlign: 'center',
                 }}>
-                    <div style={{ width: 1, height: 48, backgroundColor: '#b45309', margin: '0 auto 32px' }} />
+                    <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }} className="about-cta-buttons" />
                     <h2 style={{
                         fontFamily: 'Cormorant Garamond, Georgia, serif',
                         fontSize: 'clamp(28px, 4vw, 48px)',
@@ -332,6 +324,27 @@ export default function AboutPage() {
             grid-template-columns: 1fr !important;
           }
         }
+
+  @media (max-width: 768px) {
+    .about-hero {
+      flex-direction: column !important;
+    }
+    .about-hero-image {
+      width: 100% !important;
+      height: 50vh !important;
+    }
+    .about-approach-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    .about-stats-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    .about-cta-buttons {
+      flex-direction: column !important;
+    }
+  }
       `}</style>
         </>
     );
