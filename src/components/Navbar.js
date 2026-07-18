@@ -6,9 +6,7 @@ import Link from 'next/link';
 const navLinks = [
     { label: 'HOME', href: '/' },
     { label: 'PROJECTS', href: '/projects' },
-    { label: 'ABOUT', href: '/about' },
-    // { label: 'CLIENTS', href: '/clients' },
-    // { label: 'CONTACT', href: '/contact' },
+    { label: 'ABOUT', href: '/about' }
 ];
 
 const WHATSAPP_NUMBER = '6281992729298';
