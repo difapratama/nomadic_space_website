@@ -277,6 +277,134 @@ export default function AboutPage() {
                     </div>
                 </section>
 
+                {/* SECTION — Our Team */}
+                <section style={{
+                    padding: 'clamp(64px, 8vw, 100px) clamp(40px, 8vw, 120px)',
+                    backgroundColor: '#FDFCF8',
+                }}>
+                    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+
+                        {/* Header */}
+                        <div style={{ textAlign: 'center', marginBottom: 64 }}>
+                            <p style={{
+                                fontFamily: 'Inter, sans-serif', fontSize: 11,
+                                letterSpacing: '0.25em', color: '#b45309', marginBottom: 16,
+                            }}>
+                                OUR TEAM · TIM KAMI
+                            </p>
+                            <h2 style={{
+                                fontFamily: 'Cormorant Garamond, Georgia, serif',
+                                fontSize: 'clamp(28px, 4vw, 48px)',
+                                fontWeight: 700, color: '#1c1917', lineHeight: 1.2,
+                            }}>
+                                The People Behind the Space
+                            </h2>
+                            <p style={{
+                                fontFamily: 'Inter, sans-serif', fontSize: 13,
+                                color: '#78716c', marginTop: 16, letterSpacing: '0.03em',
+                            }}>
+                                Orang-orang di balik setiap ruang yang kami ciptakan
+                            </p>
+                        </div>
+
+                        {/* Team grid */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: 48,
+                            maxWidth: 800,
+                            margin: '0 auto',
+                        }} className="team-grid">
+
+                            {/* Member 1 - Istri */}
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{
+                                    position: 'relative',
+                                    width: 220, height: 280,
+                                    margin: '0 auto 24px',
+                                    overflow: 'hidden',
+                                }}>
+                                    <img
+                                        src="https://res.cloudinary.com/tovmg2or/image/upload/v1784393241/Desy_Ratnasari_u2az4p.jpg"
+                                        alt="Interior Designer"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                    />
+                                    {/* Warm overlay */}
+                                    <div style={{
+                                        position: 'absolute', inset: 0,
+                                        background: 'linear-gradient(to top, rgba(180,83,9,0.2) 0%, transparent 60%)',
+                                    }} />
+                                </div>
+                                <div style={{ width: 24, height: 1, backgroundColor: '#b45309', margin: '0 auto 16px' }} />
+                                <h3 style={{
+                                    fontFamily: 'Cormorant Garamond, Georgia, serif',
+                                    fontSize: 22, fontWeight: 600, color: '#1c1917', marginBottom: 4,
+                                }}>
+                                    Desy Ratnasari
+                                </h3>
+                                <p style={{
+                                    fontFamily: 'Inter, sans-serif', fontSize: 11,
+                                    letterSpacing: '0.2em', color: '#b45309', marginBottom: 16,
+                                    textTransform: 'uppercase',
+                                }}>
+                                    Interior Designer · Project Manager · Founder
+                                </p>
+                                <p style={{
+                                    fontFamily: 'Inter, sans-serif', fontSize: 13,
+                                    lineHeight: 1.8, color: '#78716c', maxWidth: 280, margin: '0 auto',
+                                }}>
+                                    Passionate interior designer with a keen eye for detail. She transforms every space into a meaningful experience.
+                                    <br /><br />
+                                    Desainer interior yang berdedikasi, mengubah setiap ruang menjadi pengalaman yang bermakna.
+                                </p>
+                            </div>
+
+                            {/* Member 2 - Anda */}
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{
+                                    position: 'relative',
+                                    width: 220, height: 280,
+                                    margin: '0 auto 24px',
+                                    overflow: 'hidden',
+                                }}>
+                                    <img
+                                        src="https://res.cloudinary.com/tovmg2or/image/upload/v1784393777/513904500_24515078318075810_3362103840231229643_n_nam5ty.jpg"
+                                        alt="Marketing & Technical"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                    />
+                                    <div style={{
+                                        position: 'absolute', inset: 0,
+                                        background: 'linear-gradient(to top, rgba(180,83,9,0.2) 0%, transparent 60%)',
+                                    }} />
+                                </div>
+                                <div style={{ width: 24, height: 1, backgroundColor: '#b45309', margin: '0 auto 16px' }} />
+                                <h3 style={{
+                                    fontFamily: 'Cormorant Garamond, Georgia, serif',
+                                    fontSize: 22, fontWeight: 600, color: '#1c1917', marginBottom: 4,
+                                }}>
+                                    Masfud Difa Pratama
+                                </h3>
+                                <p style={{
+                                    fontFamily: 'Inter, sans-serif', fontSize: 11,
+                                    letterSpacing: '0.2em', color: '#b45309', marginBottom: 16,
+                                    textTransform: 'uppercase',
+                                }}>
+                                    Marketing · Technical Operations · Co-Founder
+                                </p>
+                                <p style={{
+                                    fontFamily: 'Inter, sans-serif', fontSize: 13,
+                                    lineHeight: 1.8, color: '#78716c', maxWidth: 280, margin: '0 auto',
+                                }}>
+                                    Handles everything behind the scenes — from client relations and site surveys to technical execution and digital presence.
+                                    <br /><br />
+                                    Mengelola semua hal di balik layar, dari hubungan klien, survei lapangan, hingga eksekusi teknis dan kehadiran digital.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
                 {/* SECTION 4 — CTA */}
                 <section style={{
                     padding: 'clamp(64px, 8vw, 100px) clamp(40px, 8vw, 120px)',
@@ -344,6 +472,14 @@ export default function AboutPage() {
     .about-cta-buttons {
       flex-direction: column !important;
     }
+  }
+  @media (max-width: 768px) {
+    .about-hero { flex-direction: column !important; }
+    .about-hero-image { width: 100% !important; height: 50vh !important; }
+    .about-approach-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .about-stats-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .about-cta-buttons { flex-direction: column !important; }
+    .team-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
   }
       `}</style>
         </>
