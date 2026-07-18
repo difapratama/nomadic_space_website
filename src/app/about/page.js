@@ -99,7 +99,7 @@ export default function AboutPage() {
                                 fontStyle: 'italic',
                                 lineHeight: 1.5,
                             }}>
-                                "Every space tells a story.<br />We make sure it tells yours."
+                                &ldquo;Every space tells a story. We make sure it tells yours.&rdquo;
                             </p>
                         </div>
                     </div>
