@@ -14,7 +14,7 @@ const slides = [
         subtitle: 'BLENDING FUNCTION WITH BEAUTY',
     },
     {
-        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444271/nomadic-space03_iqrgtz.jpg',
+        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784445349/nomadic-space03_oznzq2.jpg',
         title: 'YOUR SPACE, YOUR STORY',
         subtitle: 'CREATING GREAT WORKPLACES & LIVING SPACES',
     },
