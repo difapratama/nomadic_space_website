@@ -4,17 +4,17 @@ import { useState, useEffect, useRef } from 'react';
 
 const slides = [
     {
-        image: 'https://www.arkadiaworks.com/wp-content/themes/domik-new/images/bg/slide1.jpg',
+        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444114/nomadic-space01_xs9nr7.jpg',
         title: 'WELCOME TO NOMADIC SPACE',
         subtitle: 'WE CRAFT SPACES THAT FEEL LIKE HOME',
     },
     {
-        image: 'https://www.arkadiaworks.com/wp-content/themes/domik-new/images/bg/slide2.jpg',
+        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444272/nomadic-space02_k8a0oq.jpg',
         title: 'THOUGHTFUL INTERIOR DESIGN',
         subtitle: 'BLENDING FUNCTION WITH BEAUTY',
     },
     {
-        image: 'https://www.arkadiaworks.com/wp-content/themes/domik-new/images/bg/slide4.jpg',
+        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444271/nomadic-space03_iqrgtz.jpg',
         title: 'YOUR SPACE, YOUR STORY',
         subtitle: 'CREATING GREAT WORKPLACES & LIVING SPACES',
     },

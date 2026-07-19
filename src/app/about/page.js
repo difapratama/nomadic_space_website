@@ -139,8 +139,7 @@ export default function AboutPage() {
                             marginBottom: 24,
                             maxWidth: 480,
                         }}>
-                            Nomadic Space adalah studio desain interior yang lahir dari satu keyakinan sederhana —
-                            bahwa ruang yang dirancang dengan hati akan mengubah cara orang merasa di dalamnya.
+                            Nomadic Space adalah studio Interior Design & Custom Furniture yang menghadirkan desain ruang dengan pendekatan fungsional, estetis, dan personal. Kami percaya bahwa setiap ruang memiliki karakter yang unik, sehingga setiap proyek dirancang secara khusus untuk mencerminkan kebutuhan, gaya hidup, dan identitas klien.
                         </p>
 
                         <p style={{
@@ -151,10 +150,14 @@ export default function AboutPage() {
                             marginBottom: 40,
                             maxWidth: 480,
                         }}>
-                            Kami adalah tim kecil yang terdiri dari dua orang: seorang desainer interior berpengalaman
-                            dan seorang problem-solver yang memastikan setiap proyek berjalan tepat waktu, tepat anggaran,
-                            dan melampaui ekspektasi. Kecil bukan berarti terbatas — justru setiap klien mendapatkan
-                            perhatian penuh dari kami, dari awal hingga akhir.
+                            Kami menyediakan layanan mulai dari konsultasi desain, space planning, visualisasi 3D, gambar kerja, hingga pembuatan furnitur custom yang dirancang secara presisi untuk memaksimalkan fungsi dan keindahan setiap ruang.
+
+                            Dengan menggabungkan kreativitas, perhatian terhadap detail, dan kualitas material, kami menciptakan solusi interior yang tidak hanya menarik secara visual tetapi juga nyaman, tahan lama, dan bernilai jangka panjang.
+
+                            Nomadic Space melayani berbagai proyek, mulai dari hunian, apartemen, kantor, retail, F&B, hospitality, hingga ruang komersial, dengan komitmen untuk menghadirkan hasil yang berkualitas melalui proses yang profesional dan kolaboratif.
+
+                            Nomadic Space — Interior Design & Custom Furniture
+                            Designed with Purpose. Built for Life.
                         </p>
 
                         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -368,7 +371,7 @@ export default function AboutPage() {
                                     overflow: 'hidden',
                                 }}>
                                     <img
-                                        src="https://res.cloudinary.com/tovmg2or/image/upload/v1784393777/513904500_24515078318075810_3362103840231229643_n_nam5ty.jpg"
+                                        src="https://res.cloudinary.com/tovmg2or/image/upload/v1784440520/difapratama_bheqzd.jpg"
                                         alt="Marketing & Technical"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                                     />
