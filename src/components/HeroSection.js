@@ -18,6 +18,11 @@ const slides = [
         title: 'YOUR SPACE, YOUR STORY',
         subtitle: 'CREATING GREAT WORKPLACES & LIVING SPACES',
     },
+    {
+        image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784558773/venchi-galaxy-mall-surabaya-01_k6igdt.jpg',
+        title: 'Venchura Nomadic Space',
+        subtitle: 'CREATING GREAT WORKPLACES & LIVING SPACES',
+    },
 ];
 
 const TOTAL = slides.length;
