@@ -30,68 +30,77 @@ export default function ProjectsPage() {
                         <Link
                             key={project.id}
                             href={`/projects/${project.id}`}
-                            style={{ textDecoration: 'none', display: 'block', position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}
+                            style={{ textDecoration: 'none', display: 'block', position: 'relative', overflow: 'hidden' }}
                             onMouseEnter={() => setHoveredId(project.id)}
                             onMouseLeave={() => setHoveredId(null)}
                         >
                             {/* Thumbnail */}
-                            <img
-                                src={project.thumbnail}
-                                alt={project.name}
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    display: 'block',
-                                    transform: hoveredId === project.id ? 'scale(1.08)' : 'scale(1)',
-                                    transition: 'transform 0.5s ease',
-                                }}
-                            />
-
-                            {/* Hover overlay */}
-                            <div style={{
-                                position: 'absolute',
-                                inset: 0,
-                                backgroundColor: 'rgba(30, 20, 10, 0.65)',
-                                opacity: hoveredId === project.id ? 1 : 0,
-                                transition: 'opacity 0.3s ease',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: 24,
-                                textAlign: 'center',
-                            }}>
+                            <div style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}>
+                                <img
+                                    src={project.thumbnail}
+                                    alt={project.name}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        display: 'block',
+                                        transform: hoveredId === project.id ? 'scale(1.06)' : 'scale(1)',
+                                        transition: 'transform 0.5s ease',
+                                    }}
+                                />
+                                {/* Hover overlay */}
                                 <div style={{
-                                    width: 32,
-                                    height: 1,
-                                    backgroundColor: '#fcd34d',
-                                    marginBottom: 16,
-                                    transform: hoveredId === project.id ? 'scaleX(1)' : 'scaleX(0)',
-                                    transition: 'transform 0.4s ease 0.1s',
+                                    position: 'absolute', inset: 0,
+                                    backgroundColor: hoveredId === project.id ? 'rgba(30,20,10,0.35)' : 'rgba(30,20,10,0)',
+                                    transition: 'background-color 0.3s ease',
                                 }} />
-                                <p style={{
-                                    color: '#ffffff',
-                                    fontFamily: 'Cormorant Garamond, Georgia, serif',
-                                    fontSize: 18,
-                                    fontWeight: 600,
-                                    letterSpacing: '0.08em',
-                                    marginBottom: 8,
-                                    transform: hoveredId === project.id ? 'translateY(0)' : 'translateY(8px)',
-                                    transition: 'transform 0.3s ease 0.1s',
+                            </div>
+
+                            {/* Info bar */}
+                            <div style={{
+                                backgroundColor: hoveredId === project.id ? '#1c1917' : '#ffffff',
+                                borderBottom: '2px solid',
+                                borderColor: hoveredId === project.id ? '#b45309' : '#e7e5e4',
+                                padding: '12px 16px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                transition: 'all 0.3s ease',
+                            }}>
+                                <div>
+                                    <p style={{
+                                        fontFamily: 'Cormorant Garamond, Georgia, serif',
+                                        fontSize: 15,
+                                        fontWeight: 600,
+                                        color: hoveredId === project.id ? '#ffffff' : '#1c1917',
+                                        marginBottom: 2,
+                                        transition: 'color 0.3s',
+                                        letterSpacing: '0.02em',
+                                    }}>
+                                        {project.name}
+                                    </p>
+                                    <p style={{
+                                        fontFamily: 'Inter, sans-serif',
+                                        fontSize: 10,
+                                        letterSpacing: '0.18em',
+                                        color: hoveredId === project.id ? '#b45309' : '#a8a29e',
+                                        transition: 'color 0.3s',
+                                    }}>
+                                        {project.category} · {project.year}
+                                    </p>
+                                </div>
+
+                                {/* Arrow icon */}
+                                <div style={{
+                                    opacity: hoveredId === project.id ? 1 : 0,
+                                    transform: hoveredId === project.id ? 'translateX(0)' : 'translateX(-8px)',
+                                    transition: 'all 0.3s ease',
+                                    color: '#b45309',
                                 }}>
-                                    {project.name}
-                                </p>
-                                <p style={{
-                                    color: 'rgba(253,230,138,0.85)',
-                                    fontSize: 10,
-                                    letterSpacing: '0.2em',
-                                    fontFamily: 'Inter, sans-serif',
-                                    transform: hoveredId === project.id ? 'translateY(0)' : 'translateY(8px)',
-                                    transition: 'transform 0.3s ease 0.15s',
-                                }}>
-                                    {project.category} · {project.year}
-                                </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: 18, height: 18 }}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
                             </div>
                         </Link>
                     ))}

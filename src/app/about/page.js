@@ -72,7 +72,7 @@ export default function AboutPage() {
                     {/* Left — image */}
                     <div style={{ width: '45%', position: 'relative', overflow: 'hidden', flexShrink: 0 }} className="about-hero-image">
                         <img
-                            src="https://www.arkadiaworks.com/wp-content/themes/domik-new/images/bg/slide1.jpg"
+                            src="https://res.cloudinary.com/tovmg2or/image/upload/v1784558773/venchi-galaxy-mall-surabaya-02_vkorlo.jpg"
                             alt="Nomadic Space"
                             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                         />
