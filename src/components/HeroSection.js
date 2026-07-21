@@ -6,7 +6,7 @@ const slides = [
     {
         image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444114/nomadic-space01_xs9nr7.jpg',
         title: 'WELCOME TO NOMADIC SPACE',
-        subtitle: 'WE CRAFT SPACES THAT FEEL LIKE HOME',
+        subtitle: 'DESIGNED WITH PURPOSE, BUILT FOR LIFE',
     },
     {
         image: 'https://res.cloudinary.com/tovmg2or/image/upload/v1784444272/nomadic-space02_k8a0oq.jpg',
